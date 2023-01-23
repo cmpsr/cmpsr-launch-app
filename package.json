@@ -1,0 +1,27 @@
+{
+  "name": "nextjs-contentful-renderer-example-app",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.1",
+    "@cmpsr/blocks": "^12.0.3",
+    "@cmpsr/cml": "^0.2.0",
+    "@cmpsr/components": "^5.5.0",
+    "@cmpsr/nextjs-contentful-renderer": "^18.4.0",
+    "@cmpsr/signalwire": "^0.3.7",
+    "@fontsource/inter": "^4.5.14",
+    "graphql": "^16.6.0",
+    "next": "^13.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "typescript": "^4.9.3"
+  }
+}
