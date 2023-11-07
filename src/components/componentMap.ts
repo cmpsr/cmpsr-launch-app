@@ -1,6 +1,8 @@
 import { ExampleComponent } from './ExampleComponent';
 
-// This is the map of components that will be available in the mdx renderer
+// The `componentMap` associates MDX component names with React components.
+// Add components here to make them available in your MDX content from Contentful.
 export const componentMap = {
+  // e.g., Usage in MDX: <ExampleComponent />
   ExampleComponent,
 };
