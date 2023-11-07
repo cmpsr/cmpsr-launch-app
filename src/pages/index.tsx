@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
-import { Page } from '../src/Page';
-import { getStaticPropsContent } from '../src/getStaticPropsContent';
+import { Page } from '../Page';
+import { getStaticPropsContent } from '../getStaticPropsContent';
 
 export const getStaticProps: GetStaticProps = async ({ preview }) => await getStaticPropsContent('/', preview || false);
 

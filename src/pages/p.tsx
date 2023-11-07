@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from 'next';
-import { getMdx } from '../src/libs/mdx';
-import { ErrorBoundary } from '../src/components/ErrorBoundary';
-import { Page as PageComponent } from '../src/Page';
+import { getMdx } from '../libs/mdx';
+import { ErrorBoundary } from '../components/ErrorBoundary';
+import { Page as PageComponent } from '../Page';
 
 export const Page: NextPage<unknown> = ({ content, theme }: { content: unknown; theme: unknown }) => {
   return (

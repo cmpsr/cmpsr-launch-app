@@ -5,7 +5,7 @@ import { ComposerProvider } from '@cmpsr/components';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/700.css';
-import { theme } from '../src/theme';
+import { theme } from '../theme';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>

@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Page } from '../src/Page';
-import { staticPaths } from '../src/staticPaths';
-import { getStaticPropsContent } from '../src/getStaticPropsContent';
+import { Page } from '../Page';
+import { staticPaths } from '../staticPaths';
+import { getStaticPropsContent } from '../getStaticPropsContent';
 
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: (await staticPaths()).map((slug: string) => ({ params: { slug } })),
