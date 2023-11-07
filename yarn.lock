@@ -1200,15 +1200,15 @@
   resolved "https://registry.yarnpkg.com/@chakra-ui/visually-hidden/-/visually-hidden-2.2.0.tgz#9b0ecef8f01263ab808ba3bda7b36a0d91b4d5c1"
   integrity sha512-KmKDg01SrQ7VbTD3+cPWf/UfpF5MSwm3v7MWi0n5t8HnnadT13MF0MJCDSXbBWnzLv1ZKJ6zlyAOeARWX+DpjQ==
 
-"@cmpsr/blocks@^13.0.5":
-  version "13.0.5"
-  resolved "https://registry.yarnpkg.com/@cmpsr/blocks/-/blocks-13.0.5.tgz#8d5857098100a38069fa7c31d6353dcf22c62d53"
-  integrity sha512-yok99xba38obQtVLEvBhbBH1HC2d61/iAWcSzcE7I+cqlL4KUe3VlgauAfe10TzZbH3qDq+qSQnDbOOv8XQgQg==
+"@cmpsr/blocks@^13.0.6":
+  version "13.0.6"
+  resolved "https://registry.yarnpkg.com/@cmpsr/blocks/-/blocks-13.0.6.tgz#3d220ecfc1fba3fb4afe764164d7c7395ea54d14"
+  integrity sha512-R35Tc3U9ReHg9VmtLPd7JxgLVnU1DyhbB6l8XV72JH6sM4ZyJTnTrKKCkaWiNsRaWZHciHD2CsWSNQE9uoMPNg==
 
-"@cmpsr/carousel@^0.3.10":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@cmpsr/carousel/-/carousel-0.3.12.tgz#dace9626080af829105226bbc115ca82032718ad"
-  integrity sha512-QYVMgaNBacKH4UByDIfugR4PElhWMGWw1zLCKg0lK9eviDHk2eeDjfDxVnvGG3JFrkQjXHBzJRV/48W0nsWvsA==
+"@cmpsr/carousel@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@cmpsr/carousel/-/carousel-3.0.2.tgz#ced9bc88a1eac9f6014779df00f9c5410e16a194"
+  integrity sha512-feb3KqDIn36hdUkbC/4VHULlab7s/RmpGfzWqAuNqvB2o4D48X+wA35LHRGxW2QJDbXSKWqGkEySkBuzcJIMww==
   dependencies:
     pure-react-carousel "^1.30.1"
 
@@ -1217,10 +1217,10 @@
   resolved "https://registry.yarnpkg.com/@cmpsr/cml/-/cml-0.10.1.tgz#4f1f410b132ffe33d3eef49ae32883ed07143634"
   integrity sha512-05N8RsRzPCHxUZNcK/uDMl7YPYYwbTOm0cY2qgAXkAgZcTkc0414CP6mMvf1aWuca5iFJMO/5AIKO94qjgi84A==
 
-"@cmpsr/components@^6.4.0":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@cmpsr/components/-/components-6.4.0.tgz#2df6bdec84c38fc7d58529deacd7f101cf3f847b"
-  integrity sha512-NTJdf2EE5Rs0mFoZ0U7ux0CDN56OghzFQHcctFUvA7huxlF/Xp2ekRH08YP6CmmZXtHwpL/COX2QJWkhtVWt8g==
+"@cmpsr/components@^6.5.0":
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/@cmpsr/components/-/components-6.5.0.tgz#25d1d13bc907d2ed6f5d47ac5c5ca7801a68bfa2"
+  integrity sha512-Gf9lRSeqm8nsKNq0t+omVpPqDQbshL1E5c2XLuKgonUMdaQXvfuBwcwv81oWaywq5Y3JaGwVEIZ/EgMwCaTESw==
   dependencies:
     "@chakra-ui/react" "^2.8.0"
     "@chakra-ui/react-utils" "^2.0.11"
@@ -1240,10 +1240,10 @@
     cross-fetch "^3.1.4"
     invariant "^2.2.4"
 
-"@cmpsr/nextjs-contentful-renderer@^23.0.4":
-  version "23.0.4"
-  resolved "https://registry.yarnpkg.com/@cmpsr/nextjs-contentful-renderer/-/nextjs-contentful-renderer-23.0.4.tgz#5d8bc1194c81e88c9ddba3c854e58f29d5e5f04b"
-  integrity sha512-rn+zmqjGXku1ouatv1/K32sdvJPKpcAbHUFYwF0UwQdsWxiRirlKiFtdYT0qpXSCi5gQzXCVQhDQJU36I5oA3g==
+"@cmpsr/nextjs-contentful-renderer@^23.0.5":
+  version "23.0.5"
+  resolved "https://registry.yarnpkg.com/@cmpsr/nextjs-contentful-renderer/-/nextjs-contentful-renderer-23.0.5.tgz#b49bb5542bd519acf5c9e08826a9f362bb30b170"
+  integrity sha512-nV9ISxmFIDRBbR4iz02QXPayvBdIvxtFIOPiBEjlF8pzkAztvIbpLvlROg1IVAy5c+KIwpckyeORNgIEovoH3A==
   dependencies:
     "@cmpsr/contentful-core" "^0.5.4"
     cookie "^0.5.0"
@@ -1251,10 +1251,10 @@
     lodash "^4.17.21"
     mdx-bundler "^9.0.0"
 
-"@cmpsr/signalwire@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@cmpsr/signalwire/-/signalwire-1.0.5.tgz#2277a8d63c2ff687dc2d552ccec6751e7aa65f13"
-  integrity sha512-78abW5nqAq31aqYm677b+eyImPHAi1hJENTjddyF2ItUNh9pL+dvqMXzo3DvYuzwxu6dAXTgJ+im0nER6F/27w==
+"@cmpsr/signalwire@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@cmpsr/signalwire/-/signalwire-1.0.6.tgz#36bd11281677b6139ec57e1a24263f8543fe9265"
+  integrity sha512-34tQsr//Z1UR8SLbyJwA3zhIrVljbMnVsPo2uaSdX33jSTD5dEq13ernu2yvO6OqO99f4Ih9mytj4FHfF3JAAg==
   dependencies:
     "@signalwire/js" "^3.16.0"
     "@signalwire/realtime-api" "^3.5.0"
