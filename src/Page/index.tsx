@@ -22,7 +22,7 @@ export const Page: NextPage<any> = ({ content, title, metaConfiguration, theme }
           })}
         </Head>
       )}
-      {content.map((block, index) => (
+      {content?.map((block, index) => (
         <MdxRenderer key={index} content={block} componentMap={componentMap} />
       ))}
     </ComposerProvider>
