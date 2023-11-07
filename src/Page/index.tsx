@@ -2,6 +2,7 @@ import { MdxRenderer } from '@cmpsr/nextjs-contentful-renderer/client';
 import { ComposerProvider } from '@cmpsr/components';
 import { NextPage } from 'next';
 import Head from 'next/head';
+import { componentMap } from '../components/componentMap';
 
 export const Page: NextPage<any> = ({ content, title, metaConfiguration, theme }) => {
   const metaTags = Object.values(metaConfiguration ?? {});
@@ -22,7 +23,7 @@ export const Page: NextPage<any> = ({ content, title, metaConfiguration, theme }
         </Head>
       )}
       {content.map((block, index) => (
-        <MdxRenderer key={index} content={block} componentMap={{}} />
+        <MdxRenderer key={index} content={block} componentMap={componentMap} />
       ))}
     </ComposerProvider>
   );
