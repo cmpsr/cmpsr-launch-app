@@ -11,18 +11,14 @@ export const getServerSideProps: GetServerSideProps<any> = async (context: GetSe
     if (!page) {
       return notFound;
     }
-    let theme = page.theme;
-    if (!theme) {
-      theme = await getDefaultTheme(context.query.preview !== undefined);
-    }
-
+    const theme = page.theme ?? (await getDefaultTheme(context.query.preview !== undefined)) ?? {};
     const content = await generateMdx(page.content, page.globalVariables);
     return {
       props: {
         title: page.title,
         content,
         metaConfiguration: page.metaConfiguration || [],
-        theme: theme || null,
+        theme: theme,
       },
     };
   } catch (e) {
