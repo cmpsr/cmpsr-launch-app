@@ -7,9 +7,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
   try {
-    const promises = (await staticPaths()).map(async (slug) => await res.revalidate(`/${slug}`));
-    await res.revalidate('/');
+    const allPaths = await staticPaths();
+    if (!allPaths.includes('/')) {
+      allPaths.push('/');
+    }
+
+    const promises = allPaths.map((slug) => res.revalidate(slug));
     await Promise.all(promises);
+
     return res.json({ revalidated: true });
   } catch (err) {
     console.error(err);
