@@ -4,24 +4,34 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",
-    "@cmpsr/blocks": "^12.0.3",
-    "@cmpsr/cml": "^0.2.0",
-    "@cmpsr/components": "^5.5.0",
-    "@cmpsr/nextjs-contentful-renderer": "^18.4.0",
-    "@cmpsr/signalwire": "^0.3.7",
+    "@cmpsr/blocks": "^13.0.6",
+    "@cmpsr/carousel": "^3.0.2",
+    "@cmpsr/cml": "^0.10.1",
+    "@cmpsr/components": "^6.5.0",
+    "@cmpsr/nextjs-contentful-renderer": "^23.0.5",
+    "@cmpsr/signalwire": "^1.0.6",
     "@fontsource/inter": "^4.5.14",
     "graphql": "^16.6.0",
-    "next": "^13.0.5",
+    "next": "^14.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "redis": "^4.6.10"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.7",
     "@types/node": "^18.11.9",
-    "@types/react": "^18.0.25",
-    "typescript": "^4.9.3"
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.3"
   }
 }

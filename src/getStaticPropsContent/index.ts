@@ -12,17 +12,14 @@ export const getStaticPropsContent = async (
       notFound: true,
     };
   }
-  let theme = page.theme;
-  if (!theme) {
-    theme = await getDefaultTheme(preview || false);
-  }
-  const content = await generateMdx(page.content);
+  const theme = page.theme ?? (await getDefaultTheme(preview)) ?? {};
+  const content = await generateMdx(page.content || [], page.globalVariables);
   return {
     props: {
       title: page.title,
       content,
       metaConfiguration: page.metaConfiguration || [],
-      theme: { ...localTheme, ...(theme || {}) },
+      theme: { ...localTheme, ...theme },
     },
   };
 };

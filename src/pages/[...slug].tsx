@@ -1,6 +1,6 @@
 import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import { generateMdx, getDefaultTheme, getPageContent } from '@cmpsr/nextjs-contentful-renderer';
-import { Page } from '../src/Page';
+import { Page } from '../Page';
 
 export const getServerSideProps: GetServerSideProps<any> = async (context: GetServerSidePropsContext) => {
   const notFound: { notFound: true } = {
@@ -11,18 +11,14 @@ export const getServerSideProps: GetServerSideProps<any> = async (context: GetSe
     if (!page) {
       return notFound;
     }
-    let theme = page.theme;
-    if (!theme) {
-      theme = await getDefaultTheme(context.query.preview !== undefined);
-    }
-
-    const content = await generateMdx(page.content);
+    const theme = page.theme ?? (await getDefaultTheme(context.query.preview !== undefined)) ?? {};
+    const content = await generateMdx(page.content, page.globalVariables);
     return {
       props: {
         title: page.title,
         content,
         metaConfiguration: page.metaConfiguration || [],
-        theme: theme || null,
+        theme,
       },
     };
   } catch (e) {
