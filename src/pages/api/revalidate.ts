@@ -8,9 +8,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
   try {
     const allPaths = await staticPaths();
-    if (!allPaths.includes('/')) {
-      allPaths.push('/');
-    }
+    allPaths.push('/');
 
     const promises = allPaths.map((slug) => res.revalidate(slug));
     await Promise.all(promises);

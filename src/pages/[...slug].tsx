@@ -18,7 +18,7 @@ export const getServerSideProps: GetServerSideProps<any> = async (context: GetSe
         title: page.title,
         content,
         metaConfiguration: page.metaConfiguration || [],
-        theme: theme,
+        theme,
       },
     };
   } catch (e) {
