@@ -75,6 +75,9 @@ yarn dev
 
 The development server will be available at `http://localhost:3000` by default.
 
+> **Note**
+> Should you face a 404 error initially, it's often due to the lack of a homepage in Contentful. Setting up a homepage should fix this issue.
+
 ### Production Server
 
 Running the application in production mode involves building the project and then starting the server. This creates optimized builds and starts the server to serve the static files.
