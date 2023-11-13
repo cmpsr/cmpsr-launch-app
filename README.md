@@ -12,7 +12,7 @@ Before diving into the project setup, ensure that your system is equipped with t
 
 - **Node.js**: Version `>=18.17.0` or greater is required. You can download and install it from the [Node.js website](https://nodejs.org/).
 
-- **Yarn**: This project uses Yarn as its package manager. Make sure Yarn is installed on your system to manage the project's dependencies. For installation instructions, visit the [Yarn website](https://classic.yarnpkg.com/en/docs/install/).
+- **Yarn**: This project uses Yarn as its package manager. Make sure Yarn is installed on your system to manage the project's dependencies. For installation instructions, visit the [Yarn website](https://yarnpkg.com/).
 
 With these prerequisites in place, you can proceed to the project setup.
 
