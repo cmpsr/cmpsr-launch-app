@@ -4,7 +4,17 @@ Harness the power of [Contentful](https://www.contentful.com/) with our speciali
 
 ## Development Setup
 
-To prepare your local development environment, follow the instructions below.
+To prepare your local development environment for this project, follow the steps outlined below. Begin by confirming that your system meets the necessary prerequisites, then proceed with the project setup.
+
+### Prerequisites
+
+Before diving into the project setup, ensure that your system is equipped with the following:
+
+- **Node.js**: Version `>=18.17.0` or greater is required. You can download and install it from the [Node.js website](https://nodejs.org/).
+
+- **Yarn**: This project uses Yarn as its package manager. Make sure Yarn is installed on your system to manage the project's dependencies. For installation instructions, visit the [Yarn website](https://classic.yarnpkg.com/en/docs/install/).
+
+With these prerequisites in place, you can proceed to the project setup.
 
 ### Initial Project Setup
 
@@ -36,16 +46,17 @@ Configure the necessary environment variables post initial setup to communicate 
 
 ```plaintext
 # Contentful configuration
-CONTENTFUL_SPACE_ID=<your_space_id>
-CONTENTFUL_ENVIRONMENT=<your_environment>
-CONTENTFUL_ACCESS_TOKEN_DELIVERY=<your_delivery_access_token>
-CONTENTFUL_ACCESS_TOKEN_PREVIEW=<your_preview_access_token>
+CONTENTFUL_SPACE_ID=<your_space_id> # Unique identifier for your Contentful space
+CONTENTFUL_ENVIRONMENT=<your_environment> # Environment in Contentful, e.g., 'master', 'development'
+CONTENTFUL_ACCESS_TOKEN_DELIVERY=<your_delivery_access_token> # Access token for reading published content
+CONTENTFUL_ACCESS_TOKEN_PREVIEW=<your_preview_access_token> # Access token for reading draft content
+CONTENTFUL_PREVIEW=<true_or_false> # Flag to toggle preview mode, useful for fetching draft content from Contentful
 
 # Site configuration
-SITE_DOMAIN=<your_site_domain>
+SITE_DOMAIN=<your_site_domain> # The domain name of your site, e.g., 'intelihealth' or 'evolveme'. This is key for routing and content delivery, especially in setups with multiple domains managed under a single Contentful space.
 
 # Redis configuration
-REDIS_URL=<your_redis_url>
+REDIS_URL=<your_redis_url> # URL for your Redis instance, used for caching.
 ```
 
 For obtaining Contentful credentials, consult the [Contentful authentication guide](https://www.contentful.com/developers/docs/references/authentication/).
