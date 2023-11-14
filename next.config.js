@@ -8,6 +8,7 @@ const nextConfig = {
       process.env.CONTENTFUL_ACCESS_TOKEN_DELIVERY,
     CONTENTFUL_ACCESS_TOKEN_PREVIEW:
       process.env.CONTENTFUL_ACCESS_TOKEN_PREVIEW,
+    CONTENTFUL_PREVIEW: process.env.CONTENTFUL_PREVIEW,
     SITE_DOMAIN: process.env.SITE_DOMAIN,
   },
 };
