@@ -53,7 +53,7 @@ CONTENTFUL_ACCESS_TOKEN_PREVIEW=<your_preview_access_token> # Access token for r
 CONTENTFUL_PREVIEW=<true_or_false> # Flag to toggle preview mode, useful for fetching draft content from Contentful
 
 # Site configuration
-SITE_DOMAIN=<your_site_domain> # The domain name of your site, e.g., 'intelihealth' or 'evolveme'. This is key for routing and content delivery, especially in setups with multiple domains managed under a single Contentful space.
+SITE_DOMAIN=<your_site_domain> # The domain name of your site, e.g., 'composer'. This is key for routing and content delivery, especially in setups with multiple domains managed under a single Contentful space.
 
 # Redis configuration
 REDIS_URL=<your_redis_url> # URL for your Redis instance, used for caching.
