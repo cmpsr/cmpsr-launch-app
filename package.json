@@ -13,7 +13,7 @@
     "@cmpsr/carousel": "^3.0.2",
     "@cmpsr/cml": "^0.10.1",
     "@cmpsr/components": "^6.5.0",
-    "@cmpsr/nextjs-contentful-renderer": "^23.1.0-canary-20231110113115",
+    "@cmpsr/nextjs-contentful-renderer": "^23.1.0",
     "@cmpsr/signalwire": "^1.0.6",
     "@fontsource/inter": "^4.5.14",
     "graphql": "^16.6.0",
