@@ -1,7 +1,13 @@
-/** @type {import('next').NextConfig} */
+//@ts-check
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { composePlugins, withNx } = require('@nx/next');
+
+/**
+ * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
+ **/
 const nextConfig = {
   transpilePackages: ['@cmpsr/nextjs-contentful-renderer'],
-  reactStrictMode: true,
   env: {
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
@@ -12,6 +18,16 @@ const nextConfig = {
     CONTENTFUL_PREVIEW: process.env.CONTENTFUL_PREVIEW,
     SITE_DOMAIN: process.env.SITE_DOMAIN,
   },
+  nx: {
+    // Set this to true if you would like to use SVGR
+    // See: https://github.com/gregberge/svgr
+    svgr: false,
+  },
 };
 
-module.exports = nextConfig;
+const plugins = [
+  // Add more Next.js plugins to this list if needed.
+  withNx,
+];
+
+module.exports = composePlugins(...plugins)(nextConfig);

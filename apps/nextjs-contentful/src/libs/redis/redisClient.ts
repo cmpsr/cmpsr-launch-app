@@ -14,7 +14,7 @@ if (!process.env.REDIS_URL) {
   throw new Error('REDIS_URL environment variable is missing.');
 }
 
-let client = createClient({ url: process.env.REDIS_URL });
+const client = createClient({ url: process.env.REDIS_URL });
 
 const connect = async () => {
   if (!client.isOpen) {
