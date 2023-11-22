@@ -81,17 +81,6 @@ To perform linting on the project's codebase, run the following command:
 npm run lint
 ```
 
-## Custom Components
-
-Our application allows the creation and usage of custom components, which can be utilized within MDX.
-
-### Adding New Components
-
-To add a new component:
-
-1. Create your component file within the `components/` directory.
-2. Register your component in the `componentMap` within `components/componentMap.ts` to make it available in MDX.
-
 ## API Routes
 
 The application includes several API routes to facilitate content management and rendering.

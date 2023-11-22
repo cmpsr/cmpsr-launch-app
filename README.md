@@ -39,3 +39,7 @@ With these prerequisites in place, you can proceed to the project setup.
 ### Application Setup: Next.js & Contentful: Powered by Composer 🚀
 
 For environment configuration and detailed setup instructions of the `nextjs-contentful` application, please see the [Next.js-Contentful README](./apps/nextjs-contentful/README.md). This guide will walk you through the necessary steps to get the application up and running.
+
+### MDX Components Library 🎨
+
+The MDX Components Library is a key part of our template, designed to enhance the content creation experience in the `nextjs-contentful` application. It allows for easy integration of custom components within MDX content. For instructions on how to use and extend this library, refer to the [MDX Components README](./libs/mdx-components/README.md).
