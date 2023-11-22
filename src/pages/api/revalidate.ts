@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { staticPaths } from '../../staticPaths';
+import { pathsRepository } from '../../repositories/paths';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'POST') {
@@ -7,7 +7,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
   try {
-    const allPaths = await staticPaths();
+    const allPaths = await pathsRepository.getStaticSlugs();
     allPaths.push('/');
 
     const promises = allPaths.map((slug) => res.revalidate(slug));

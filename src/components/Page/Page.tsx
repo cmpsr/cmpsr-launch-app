@@ -1,10 +1,12 @@
-import { MdxRenderer } from '@cmpsr/nextjs-contentful-renderer/client';
+import React from 'react';
 import { ComposerProvider } from '@cmpsr/components';
+import { MdxRenderer } from '@cmpsr/nextjs-contentful-renderer/client';
 import { NextPage } from 'next';
 import Head from 'next/head';
-import { componentMap } from '../components/componentMap';
+import { componentMap } from '../../components/componentMap';
+import { PageProps } from '../../types/page';
 
-export const Page: NextPage<any> = ({ content, title, metaConfiguration, theme }) => {
+export const Page: NextPage<PageProps> = ({ content, title, metaConfiguration, theme }) => {
   const metaTags = Object.values(metaConfiguration ?? {});
   const hasHead = title || metaTags.length > 0;
 
@@ -13,12 +15,12 @@ export const Page: NextPage<any> = ({ content, title, metaConfiguration, theme }
       {hasHead && (
         <Head>
           <title>{title}</title>
-          {metaTags.map((metaTag: any) => {
+          {metaTags.map(({ propertyName, propertyValue, content }) => {
             const props = {
-              [metaTag.propertyName]: metaTag.propertyValue,
-              content: metaTag.content,
+              [propertyName]: propertyValue,
+              content,
             };
-            return <meta key={metaTag.propertyValue} {...props} />;
+            return <meta key={propertyValue} {...props} />;
           })}
         </Head>
       )}

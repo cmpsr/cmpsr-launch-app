@@ -1,5 +1,5 @@
 import { createClient } from 'redis';
-import { redis } from '.';
+import { redis } from './redisClient';
 
 jest.mock('uuid', () => ({
   v4: () => 'uuid',
@@ -37,10 +37,7 @@ const mockGet = jest.fn().mockReturnValue(JSON.stringify({ stored: 'stored json'
 
 describe('redis', () => {
   beforeEach(() => {
-    mockConnect.mockClear();
-    mockDisconnect.mockClear();
-    mockSet.mockClear();
-    mockGet.mockClear();
+    jest.clearAllMocks();
   });
 
   beforeAll(() => {
