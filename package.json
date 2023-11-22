@@ -4,13 +4,13 @@
   "license": "MIT",
   "scripts": {
     "build": "nx run-many --target=build",
-    "build:affected": "nx affected --target=build --all",
+    "build:affected": "nx affected --target=build",
     "lint": "nx run-many --target=lint",
-    "lint:affected": "nx affected --target=lint --all",
+    "lint:affected": "nx affected --target=lint",
     "start": "nx serve nextjs-contentful",
     "test": "nx run-many --target=test",
-    "test:affected": "nx affected --target=test --all",
-    "test:affected:watch": "nx affected --target=test --all --watch"
+    "test:affected": "nx affected --target=test",
+    "test:affected:watch": "nx affected --target=test --watch"
   },
   "private": true,
   "dependencies": {
