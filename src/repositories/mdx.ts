@@ -1,13 +1,13 @@
-import { redis } from '../redis';
+import { redis } from '../libs/redis';
 
-export const createMdx = async (models: unknown[], themeObj: Record<string, unknown>): Promise<string> => {
+const createMdx = async (models: unknown[], themeObj: Record<string, unknown>): Promise<string> => {
   const content = JSON.stringify(models);
   const theme = JSON.stringify(themeObj);
 
   return redis.save({ json: { content, theme } });
 };
 
-export const getMdx = async (
+const getMdx = async (
   id: string
 ): Promise<{
   content: unknown[];
@@ -26,4 +26,9 @@ export const getMdx = async (
   }
 
   return { content, theme };
+};
+
+export const mdxRepository = {
+  createMdx,
+  getMdx,
 };

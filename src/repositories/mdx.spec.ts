@@ -1,6 +1,6 @@
-import { createMdx, getMdx } from '.';
+import { mdxRepository } from './mdx';
 
-jest.mock('../redis', () => ({
+jest.mock('../libs/redis', () => ({
   redis: {
     save: (...args) => mockSave(...args),
     get: (...args) => mockGet(...args),
@@ -18,7 +18,7 @@ describe('createMdx', () => {
     const content = ['models'];
     const theme = { theme: 'theme' };
 
-    const result = await createMdx(content, theme);
+    const result = await mdxRepository.createMdx(content, theme);
 
     expect(result).toEqual('id');
     expect(mockSave).toHaveBeenCalledWith({
@@ -32,13 +32,13 @@ describe('createMdx', () => {
     const content = ['models'];
     const theme = { theme: 'theme' };
 
-    await expect(createMdx(content, theme)).rejects.toThrow('error');
+    await expect(mdxRepository.createMdx(content, theme)).rejects.toThrow('error');
   });
 });
 
 describe('getMdx', () => {
   it('should get the mdx', async () => {
-    const result = await getMdx('id');
+    const result = await mdxRepository.getMdx('id');
 
     expect(result).toEqual({
       content: ['models'],
@@ -51,6 +51,6 @@ describe('getMdx', () => {
   it('should throw an error if the fetch fails', async () => {
     mockGet.mockRejectedValue(new Error('error'));
 
-    await expect(getMdx('id')).rejects.toThrow('error');
+    await expect(mdxRepository.getMdx('id')).rejects.toThrow('error');
   });
 });
