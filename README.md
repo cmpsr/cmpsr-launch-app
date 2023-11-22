@@ -36,10 +36,18 @@ With these prerequisites in place, you can proceed to the project setup.
    npm install
    ```
 
-### Application Setup: Next.js & Contentful: Powered by Composer 🚀
+## Applications in the Monorepo
 
-For environment configuration and detailed setup instructions of the `nextjs-contentful` application, please see the [Next.js-Contentful README](./apps/nextjs-contentful/README.md). This guide will walk you through the necessary steps to get the application up and running.
+Our monorepo features several applications, each designed for specific functionality and user experiences.
 
-### MDX Components Library 🎨
+### Next.js & Contentful: Powered by Composer 🚀
 
-The MDX Components Library is a key part of our template, designed to enhance the content creation experience in the `nextjs-contentful` application. It allows for easy integration of custom components within MDX content. For instructions on how to use and extend this library, refer to the [MDX Components README](./libs/mdx-components/README.md).
+The Next.js-Contentful application is a central part of this template, offering dynamic, content-rich web experiences. For setup and usage details, see the [Next.js-Contentful README](./apps/nextjs-contentful/README.md).
+
+## Libraries in the Monorepo
+
+The monorepo also includes libraries that provide shared functionality and components to our applications.
+
+### UI Library 🎨
+
+The UI Library offers a collection of reusable UI components usable across various applications within the monorepo. For guidelines on using and extending this library, visit the [UI Library README](./libs/ui/README.md).

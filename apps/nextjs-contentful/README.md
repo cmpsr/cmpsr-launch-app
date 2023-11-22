@@ -2,7 +2,7 @@
 
 This Next.js application, part of our NX monorepo, is tailored for creating content-rich pages using [Contentful](https://www.contentful.com/) and the [Composer](https://cmpsr.io/) suite. It leverages the [🎨 Composer Design System](https://www.figma.com/community/file/1117071742977134044/composer-design-system) for a unified aesthetic.
 
-### Environment Configuration
+## Environment Configuration
 
 After initial setup, you'll need to configure environment variables to ensure seamless communication with services like Contentful and Redis.
 
@@ -80,6 +80,40 @@ To perform linting on the project's codebase, run the following command:
 ```bash
 npm run lint
 ```
+
+## Integrating Custom Components in MDX
+
+Our application allows for the use of custom components within MDX content. This includes components from the `ui` library, this application, or any other library within the monorepo.
+
+### How to Add Custom Components
+
+1. **Import the Component**: Ensure that the desired component is exported from its source library. For example, importing a component from the ui library would look like this:
+
+   ```javascript
+   import { ExampleComponent } from '@ui';
+   ```
+
+2. **Add to mdxComponentMap**: All components used in MDX must be registered in the `mdxComponentMap` dictionary located at `apps/nextjs-contentful/src/components/mdxComponentMap.ts`. Add your component to this dictionary to make it available in MDX content.
+
+   ```javascript
+   // In apps/nextjs-contentful/src/components/mdxComponentMap.ts
+   import { CustomComponent } from '@ui';
+
+   const mdxComponentMap = {
+     ...existingComponents,
+     CustomComponent, // Add your component here
+   };
+   ```
+
+3. **Usage in MDX**: Once added to the `mdxComponentMap`, the component can be used directly in your MDX.
+
+   ```mdx
+   # My MDX Content
+
+   Use your custom component like this:
+
+   <CustomComponent />
+   ```
 
 ## API Routes
 
