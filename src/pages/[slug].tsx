@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { Page } from '../components/Page';
-import { staticPaths } from '../staticPaths';
 import { getStaticPropsContent } from '../getStaticPropsContent';
+import { pathsRepository } from '../repositories/paths';
 
 export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: (await staticPaths()).map((slug: string) => ({ params: { slug } })),
+  paths: (await pathsRepository.getStaticSlugs()).map((slug: string) => ({ params: { slug } })),
   fallback: false,
 });
 
