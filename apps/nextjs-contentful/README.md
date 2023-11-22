@@ -1,65 +1,44 @@
 # Next.js & Contentful: Powered by Composer 🚀
 
-Harness the power of [Contentful](https://www.contentful.com/) with our specialized Next.js framework, designed to streamline the development of content-rich pages. Utilize the comprehensive tools provided by the [Composer](https://cmpsr.io/) suite for crafting custom MDX and components. This setup brings the seamless integration of the [🎨 Composer Design System](https://www.figma.com/community/file/1117071742977134044/composer-design-system), ensuring a unified and elegant visual language.
-
-## Development Setup
-
-To prepare your local development environment for this project, follow the steps outlined below. Begin by confirming that your system meets the necessary prerequisites, then proceed with the project setup.
-
-### Prerequisites
-
-Before diving into the project setup, ensure that your system is equipped with the following:
-
-- **Node.js**: Version `>=18.17.0` or greater is required. You can download and install it from the [Node.js website](https://nodejs.org/).
-
-- **Yarn**: This project uses Yarn as its package manager. Make sure Yarn is installed on your system to manage the project's dependencies. For installation instructions, visit the [Yarn website](https://yarnpkg.com/).
-
-With these prerequisites in place, you can proceed to the project setup.
-
-### Initial Project Setup
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/cmpsr/nextjs-contentful-renderer-example-app.git
-   ```
-
-2. **Navigate to the project directory**
-
-   ```bash
-   cd nextjs-contentful-renderer-example-app
-   ```
-
-3. **Install dependencies**
-
-   ```bash
-   yarn install
-   ```
+This Next.js application, part of our NX monorepo, is tailored for creating content-rich pages using [Contentful](https://www.contentful.com/) and the [Composer](https://cmpsr.io/) suite. It leverages the [🎨 Composer Design System](https://www.figma.com/community/file/1117071742977134044/composer-design-system) for a unified aesthetic.
 
 ### Environment Configuration
 
-Configure the necessary environment variables post initial setup to communicate with services like Contentful and Redis:
+After initial setup, you'll need to configure environment variables to ensure seamless communication with services like Contentful and Redis.
 
-1. **Create an Environment File**: Make a new `.env` file at the project's root.
+1. **Navigate to the App Directory**
+   Change to the `apps/nextjs-contentful` directory where the environment file will be set up.
 
-2. **Set the Environment Variables**: Input the required variables in the `.env` file.
+   ```bash
+   cd apps/nextjs-contentful
+   ```
 
-```plaintext
-# Contentful configuration
-CONTENTFUL_SPACE_ID=<your_space_id> # Unique identifier for your Contentful space
-CONTENTFUL_ENVIRONMENT=<your_environment> # Environment in Contentful, e.g., 'master', 'development'
-CONTENTFUL_ACCESS_TOKEN_DELIVERY=<your_delivery_access_token> # Access token for reading published content
-CONTENTFUL_ACCESS_TOKEN_PREVIEW=<your_preview_access_token> # Access token for reading draft content
-CONTENTFUL_PREVIEW=<true_or_false> # Flag to toggle preview mode, useful for fetching draft content from Contentful
+2. **Create and Set Up the Environment File**:
+   Copy the `.env.example` file and rename it to `.env`. This file contains template variables that you will need to update.
 
-# Site configuration
-SITE_DOMAIN=<your_site_domain> # The domain name of your site, e.g., 'composer'. This is key for routing and content delivery, especially in setups with multiple domains managed under a single Contentful space.
+   ```bash
+   cp .env.example .env
+   ```
 
-# Redis configuration
-REDIS_URL=<your_redis_url> # URL for your Redis instance, used for caching.
-```
+3. **Update Environment Variables**:
+   Update the `.env` file with the appropiate values for your setup.
 
-For obtaining Contentful credentials, consult the [Contentful authentication guide](https://www.contentful.com/developers/docs/references/authentication/).
+   ```plaintext
+   # Contentful configuration
+   CONTENTFUL_SPACE_ID=<your_space_id> # Unique identifier for your Contentful space
+   CONTENTFUL_ENVIRONMENT=<your_environment> # Environment in Contentful, e.g., 'master', 'development'
+   CONTENTFUL_ACCESS_TOKEN_DELIVERY=<your_delivery_access_token> # Access token for reading published content
+   CONTENTFUL_ACCESS_TOKEN_PREVIEW=<your_preview_access_token> # Access token for reading draft content
+   CONTENTFUL_PREVIEW=<true_or_false> # Flag to toggle preview mode, useful for fetching draft content from Contentful
+
+   # Site configuration
+   SITE_DOMAIN=<your_site_domain> # The domain name of your site, e.g., 'composer'. This is key for routing and content delivery, especially in setups with multiple domains managed under a single Contentful space.
+
+   # Redis configuration
+   REDIS_URL=<your_redis_url> # URL for your Redis instance, used for caching.
+   ```
+
+   For obtaining Contentful credentials, consult the [Contentful authentication guide](https://www.contentful.com/developers/docs/references/authentication/).
 
 ## Running the Application
 
@@ -70,31 +49,37 @@ After setting up your environment, you can run the application in development or
 To start the development server, which allows for live reloading and other development features, run the following command:
 
 ```bash
-yarn dev
+npm run start
 ```
 
-The development server will be available at `http://localhost:3000` by default.
+The development server will be available at `http://localhost:4200` by default.
 
 > **Note**
 > Should you face a 404 error initially, it's often due to the lack of a homepage in Contentful. Setting up a homepage should fix this issue.
 
-### Production Server
+### Build
 
 Running the application in production mode involves building the project and then starting the server. This creates optimized builds and starts the server to serve the static files.
 
-1. **Build the application**
-
 ```bash
-yarn build
+npm run build
 ```
 
-2. **Start the production server**
+### Test
+
+To execute the test suites, use the following command:
 
 ```bash
-yarn start
+npm run test
 ```
 
-After running the production server, the application will be running in production mode on your specified port, which is also `3000` by default.
+### Lint
+
+To perform linting on the project's codebase, run the following command:
+
+```bash
+npm run lint
+```
 
 ## Custom Components
 
@@ -147,8 +132,8 @@ Here's an example of how to integrate your customized theme into `_app`:
 
 ```javascript
 // src/pages/_app.js
-import { ComposerProvider } from "@cmpsr/components";
-import { theme } from "../src/theme";
+import { ComposerProvider } from '@cmpsr/components';
+import { theme } from '../src/theme';
 
 const App = ({ Component, pageProps }) => (
   <>
