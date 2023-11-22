@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Page } from '../Page';
+import { Page } from '../components/Page';
 import { staticPaths } from '../staticPaths';
 import { getStaticPropsContent } from '../getStaticPropsContent';
 

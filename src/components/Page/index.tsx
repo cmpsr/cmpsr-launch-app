@@ -2,7 +2,7 @@ import { MdxRenderer } from '@cmpsr/nextjs-contentful-renderer/client';
 import { ComposerProvider } from '@cmpsr/components';
 import { NextPage } from 'next';
 import Head from 'next/head';
-import { componentMap } from '../components/componentMap';
+import { componentMap } from '../../components/componentMap';
 
 export const Page: NextPage<any> = ({ content, title, metaConfiguration, theme }) => {
   const metaTags = Object.values(metaConfiguration ?? {});

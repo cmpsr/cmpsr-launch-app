@@ -1,6 +1,6 @@
 import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import { generateMdx, getDefaultTheme, getPageContent } from '@cmpsr/nextjs-contentful-renderer';
-import { Page } from '../Page';
+import { Page } from '../components/Page';
 
 export const getServerSideProps: GetServerSideProps<any> = async (context: GetServerSidePropsContext) => {
   const notFound: { notFound: true } = {
