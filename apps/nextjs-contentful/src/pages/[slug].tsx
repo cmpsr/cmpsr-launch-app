@@ -10,7 +10,6 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   fallback: false,
 });
 
-export const getStaticProps: GetStaticProps = async (context) =>
-  await pageRepository.getStaticPageContent(context);
+export const getStaticProps: GetStaticProps = async (context) => await pageRepository.getStaticPageContent(context);
 
 export default Page;
