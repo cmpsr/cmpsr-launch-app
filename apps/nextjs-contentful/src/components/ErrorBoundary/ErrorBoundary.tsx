@@ -2,7 +2,7 @@ import { Divider, Flex, Text } from '@cmpsr/components';
 import { Component, PropsWithChildren } from 'react';
 
 export class ErrorBoundary extends Component<
-  PropsWithChildren<{}>,
+  PropsWithChildren,
   {
     hasError: boolean;
     error?: Error;
@@ -25,8 +25,8 @@ export class ErrorBoundary extends Component<
           An error ocurred while generating the preview
         </Text>
         <Text variant="text-body-display-M">
-          Please double check that you are not using custom components not available in the preview app, or try again
-          later.
+          Please double check that you are not using custom components not
+          available in the preview app, or try again later.
         </Text>
         {this.state.error && (
           <>

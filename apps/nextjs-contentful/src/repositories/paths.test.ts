@@ -1,6 +1,8 @@
 import { pathsRepository } from './paths';
 
-const mockGetStaticRoutes = jest.fn().mockResolvedValue([{ slug: '/slug1' }, { slug: '/slug2' }]);
+const mockGetStaticRoutes = jest
+  .fn()
+  .mockResolvedValue([{ slug: '/slug1' }, { slug: '/slug2' }]);
 jest.mock('@cmpsr/nextjs-contentful-renderer', () => ({
   getStaticRoutes: () => mockGetStaticRoutes(),
 }));
