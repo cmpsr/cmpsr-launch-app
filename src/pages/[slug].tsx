@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { Page } from '../components/Page';
-import { getStaticPropsContent } from '../getStaticPropsContent';
+import { pageRepository } from '../repositories/page';
 import { pathsRepository } from '../repositories/paths';
 
 export const getStaticPaths: GetStaticPaths = async () => ({
@@ -8,33 +8,7 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   fallback: false,
 });
 
-const getSlug = (path: string | string[]): string => (Array.isArray(path) ? path.join('/') : path);
-
-export const getStaticProps: GetStaticProps = async ({ preview, params }) => {
-  try {
-    return await getStaticPropsContent(getSlug(params.slug), preview || false);
-  } catch (err) {
-    if (isTooManyRequestsError(err)) {
-      return await getStaticProps({ preview, params });
-    } else {
-      console.error(err);
-      throw err;
-    }
-  }
-};
+export const getStaticProps: GetStaticProps = async (context) =>
+  await pageRepository.getStaticPageContent({ ...context, params: { slug: '/' } });
 
 export default Page;
-
-const isTooManyRequestsError = (err: any): boolean => {
-  if (has429StatusCode(err)) {
-    return true;
-  }
-  const networkError = err?.networkError;
-  if (Array.isArray(networkError)) {
-    return networkError.some(has429StatusCode);
-  }
-  return false;
-};
-
-const has429StatusCode = (error: any): boolean =>
-  error?.statusCode === 429 || error?.status === 429 || error?.message?.includes('429');

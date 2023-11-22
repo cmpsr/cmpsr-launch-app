@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
 import { Page } from '../components/Page';
-import { getStaticPropsContent } from '../getStaticPropsContent';
+import { pageRepository } from '../repositories/page';
 
-export const getStaticProps: GetStaticProps = async ({ preview }) =>
-  await getStaticPropsContent('/', preview || process.env.CONTENTFUL_PREVIEW === 'true');
+export const getStaticProps: GetStaticProps = async (context) =>
+  await pageRepository.getStaticPageContent({ ...context, params: { slug: '/' } });
 
 export default Page;
