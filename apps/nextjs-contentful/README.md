@@ -1,8 +1,26 @@
-# Next.js & Contentful: Powered by Composer 🚀
+<h1 align="center">Next.js & Contentful: Powered by Composer 🚀</h1>
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+   - [Environment Configuration](#environment-configuration)
+3. [Development Workflow](#development-workflow)
+   - [Running the Application](#running-the-application)
+   - [Building](#building)
+   - [Testing](#testing)
+   - [Linting](#linting)
+4. [MDX Components](#mdx-components)
+5. [API Endpoints](#api-endpoints)
+6. [Theming](#theming)
+
+## Introduction
 
 This Next.js application, part of our NX monorepo, is tailored for creating content-rich pages using [Contentful](https://www.contentful.com/) and the [Composer](https://cmpsr.io/) suite. It leverages the [🎨 Composer Design System](https://www.figma.com/community/file/1117071742977134044/composer-design-system) for a unified aesthetic.
 
-## Environment Configuration
+## Getting Started
+
+### Environment Configuration
 
 After initial setup, you'll need to configure environment variables to ensure seamless communication with services like Contentful and Redis.
 
@@ -40,11 +58,13 @@ After initial setup, you'll need to configure environment variables to ensure se
 
    For obtaining Contentful credentials, consult the [Contentful authentication guide](https://www.contentful.com/developers/docs/references/authentication/).
 
-## Running the Application
+## Development Workflow
+
+### Running the Application
 
 After setting up your environment, you can run the application in development or production mode.
 
-### Development Server
+#### Development Server
 
 To start the development server, which allows for live reloading and other development features, run the following command:
 
@@ -57,7 +77,7 @@ The development server will be available at `http://localhost:4200` by default.
 > **Note**
 > Should you face a 404 error initially, it's often due to the lack of a homepage in Contentful. Setting up a homepage should fix this issue.
 
-### Build
+### Building
 
 Running the application in production mode involves building the project and then starting the server. This creates optimized builds and starts the server to serve the static files.
 
@@ -65,7 +85,7 @@ Running the application in production mode involves building the project and the
 npm run build
 ```
 
-### Test
+### Testing
 
 To execute the test suites, use the following command:
 
@@ -73,7 +93,7 @@ To execute the test suites, use the following command:
 npm run test
 ```
 
-### Lint
+### Linting
 
 To perform linting on the project's codebase, run the following command:
 
@@ -81,11 +101,11 @@ To perform linting on the project's codebase, run the following command:
 npm run lint
 ```
 
-## Integrating Custom Components in MDX
+## MDX Components
 
 Our application allows for the use of custom components within MDX content. This includes components from the `ui` library, this application, or any other library within the monorepo.
 
-### How to Add Custom Components
+### Create new Components
 
 1. **Import the Component**: Ensure that the desired component is exported from its source library. For example, importing a component from the ui library would look like this:
 
@@ -115,7 +135,7 @@ Our application allows for the use of custom components within MDX content. This
    <CustomComponent />
    ```
 
-## API Routes
+## API Endpoints
 
 The application includes several API routes to facilitate content management and rendering.
 
@@ -135,19 +155,19 @@ The application includes several API routes to facilitate content management and
 
 Each of these routes are defined within the `pages/api` directory and can be further customized as needed.
 
-## Theme Customization
+## Theming
 
 To align your application with your brand's style, you can customize the theme according to your design specifications. Follow these steps to apply a customized theme using the Composer Design System and Figma.
 
-### Customize Your Theme in Figma
+### Theme Customization
 
 First, use our [Figma Composer Design System](https://www.figma.com/community/file/1117071742977134044/composer-design-system) to customize your design tokens such as colors, fonts, and other styling properties.
 
-### Export Your Custom Theme
+### Theme Exporting
 
 Once you have finalized your design in Figma, use the [Composer Themes Plugin](https://www.figma.com/community/plugin/1131606090957780017/composer-themes) to export the theme as a JSON object.
 
-### Apply Your Theme in the Application
+### Theme Application
 
 After exporting your theme, update the theme object in the `themes/` file with your customized JSON object. Then, make sure to pass this theme object to the `ComposerProvider` in your `_app` file to apply it globally across your application.
 

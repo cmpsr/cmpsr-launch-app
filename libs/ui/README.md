@@ -1,4 +1,17 @@
-# UI Library 🎨
+<h1 align="center">UI Library 🎨</h1>
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+   - [Installation](#installation)
+   - [Usage](#usage)
+3. [Component Development](#component-development)
+4. [Development Workflow](#development-workflow)
+   - [Testing](#testing)
+   - [Linting](#linting)
+
+## Introduction
 
 Welcome to the UI library, a comprehensive collection of reusable UI components designed to be leveraged across various applications and libraries within our NX monorepo. This library serves as the cornerstone for building consistent and efficient user interfaces.
 
@@ -6,11 +19,11 @@ Welcome to the UI library, a comprehensive collection of reusable UI components 
 
 To start using the `ui` components in your project, follow these steps:
 
-## Installation
+### Installation
 
 As the `ui` library is part of the monorepo, no separate installation is required. Ensure that your monorepo dependencies are up to date.
 
-## Usage
+### Usage
 
 1. **Import Components**: You can import the desired components from the `ui` library into your application:
    ```javascript
@@ -21,7 +34,7 @@ As the `ui` library is part of the monorepo, no separate installation is require
    <ExampleComponent />
    ```
 
-## Adding New Components
+## Component Development
 
 Creating new components in the `ui` library is a straightforward process that leverages the power of the NX CLI to enhance efficiency and consistency.
 
@@ -31,7 +44,9 @@ Use the NX CLI to scaffold a new component. This command not only creates the co
 nx g @nx/react:component libs/ui/src/lib/{component_name}
 ```
 
-### Test
+## Development Workflow
+
+### Testing
 
 To execute the test suites, use the following command:
 
@@ -39,7 +54,7 @@ To execute the test suites, use the following command:
 npm run test
 ```
 
-### Lint
+### Linting
 
 To perform linting on the project's codebase, run the following command:
 
