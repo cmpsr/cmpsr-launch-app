@@ -69,7 +69,7 @@ After setting up your environment, you can run the application in development or
 To start the development server, which allows for live reloading and other development features, run the following command:
 
 ```bash
-npm run start
+npm run start:nextful
 ```
 
 The development server will be available at `http://localhost:4200` by default.
@@ -82,7 +82,7 @@ The development server will be available at `http://localhost:4200` by default.
 Running the application in production mode involves building the project and then starting the server. This creates optimized builds and starts the server to serve the static files.
 
 ```bash
-npm run build
+npm run build:nextful
 ```
 
 ### Testing

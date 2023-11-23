@@ -10,6 +10,7 @@
    - [Next.js & Contentful 🚀](#nextjs--contentful-)
 4. [Libraries](#libraries)
    - [UI Components 🎨](#ui-components-)
+   - [Storybook 📚](#storybook-)
 5. [License ](#license)
 
 ## Introduction
@@ -65,6 +66,10 @@ The monorepo also includes libraries that provide shared functionality and compo
 ### UI Components 🎨
 
 The UI Library offers a collection of reusable UI components usable across various applications within the monorepo. For guidelines on using and extending this library, visit the [UI Library README](./libs/ui/README.md).
+
+### Storybook 📚
+
+Explore and interact with our UI components through our Storybook library. This tool helps visualize and test the components in isolation. For more information, see the [Storybook Library README](./libs/storybook/README.md).
 
 ## License
 
