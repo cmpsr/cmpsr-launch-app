@@ -1,4 +1,18 @@
-# The Composer Starter Template 🧩
+<h1 align="center">The Composer Starter Template ✨</h1>
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+3. [Applications](#applications)
+   - [Next.js & Contentful 🚀](#nextjs--contentful-)
+4. [Libraries](#libraries)
+   - [UI Components 🎨](#ui-components-)
+5. [License ](#license)
+
+## Introduction
 
 Welcome to the Composer Starter Template, a streamlined foundation for your web development projects. This template primarily features a Next.js application integrated with Contentful, creating a powerful combination for developing dynamic, content-rich web experiences. It's an ideal starting point for those looking to harness the flexibility of Next.js alongside the robust content management capabilities of Contentful.
 
@@ -16,7 +30,7 @@ Before diving into the project setup, ensure that your system is equipped with t
 
 With these prerequisites in place, you can proceed to the project setup.
 
-### Setup
+### Installation
 
 1. **Clone the repository**
 
@@ -36,6 +50,22 @@ With these prerequisites in place, you can proceed to the project setup.
    npm install
    ```
 
-### Application Setup: Next.js & Contentful: Powered by Composer 🚀
+## Applications
 
-For environment configuration and detailed setup instructions of the `nextjs-contentful` application, please see the [Next.js-Contentful README](./apps/nextjs-contentful/README.md). This guide will walk you through the necessary steps to get the application up and running.
+Our monorepo features several applications, each designed for specific functionality and user experiences.
+
+### Next.js & Contentful 🚀
+
+The Next.js-Contentful application is a central part of this template, offering dynamic, content-rich web experiences. For setup and usage details, see the [Next.js-Contentful README](./apps/nextjs-contentful/README.md).
+
+## Libraries
+
+The monorepo also includes libraries that provide shared functionality and components to our applications.
+
+### UI Components 🎨
+
+The UI Library offers a collection of reusable UI components usable across various applications within the monorepo. For guidelines on using and extending this library, visit the [UI Library README](./libs/ui/README.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
