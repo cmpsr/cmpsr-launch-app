@@ -5,11 +5,10 @@
   "scripts": {
     "build": "nx run-many --target=build",
     "build:affected": "nx affected --target=build",
-    "build:nextful": "nx build nextjs-contentful",
     "build:sb": "nx build-storybook storybook",
     "lint": "nx run-many --target=lint",
     "lint:affected": "nx affected --target=lint",
-    "start:nextful": "nx serve nextjs-contentful",
+    "start": "nx serve nextjs-contentful",
     "start:sb": "nx storybook storybook",
     "test": "nx run-many --target=test",
     "test:affected": "nx affected --target=test",
