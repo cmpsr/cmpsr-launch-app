@@ -8,6 +8,7 @@
    - [Installation](#installation)
 3. [Applications](#applications)
    - [Next.js & Contentful 🚀](#nextjs--contentful-)
+   - [Storybook 📚](#storybook-)
 4. [Libraries](#libraries)
    - [UI Components 🎨](#ui-components-)
 5. [License ](#license)
@@ -57,6 +58,10 @@ Our monorepo features several applications, each designed for specific functiona
 ### Next.js & Contentful 🚀
 
 The Next.js-Contentful application is a central part of this template, offering dynamic, content-rich web experiences. For setup and usage details, see the [Next.js-Contentful README](./apps/nextjs-contentful/README.md).
+
+### Storybook 📚
+
+Explore and interact with our UI components through our Storybook. This tool helps visualize and test the components in isolation. For more information, see the [Storybook README](./apps/storybook/README.md).
 
 ## Libraries
 
