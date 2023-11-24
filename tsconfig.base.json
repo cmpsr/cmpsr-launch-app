@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@ui": ["libs/ui/src/index.ts"],
-      "storybook": ["libs/storybook/src/index.ts"]
+      "storybook": ["apps/storybook/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

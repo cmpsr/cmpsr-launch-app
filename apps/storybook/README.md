@@ -1,4 +1,4 @@
-<h1 align="center">Storybook Library for UI Components 📚</h1>
+<h1 align="center">Storybook 📚</h1>
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Welcome to our Storybook Library, the visual playground for our UI components. This Storybook setup serves as a dynamic environment for developing and showcasing the components used across various applications within our NX monorepo. It's an essential tool for visualizing component behavior and ensuring design consistency.
+Welcome to our Storybook, the visual playground for our UI components. This Storybook setup serves as a dynamic environment for developing and showcasing the components used across various applications within our NX monorepo. It's an essential tool for visualizing component behavior and ensuring design consistency.
 
 ## Getting Started
 
