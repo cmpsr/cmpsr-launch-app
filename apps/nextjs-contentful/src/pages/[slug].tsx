@@ -10,6 +10,10 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   fallback: false,
 });
 
-export const getStaticProps: GetStaticProps = async (context) => await pageRepository.getStaticPageContent(context);
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pageProps = await pageRepository.getStaticPageContent(context);
+  const revalidationStrategy = process.env.REVALIDATION_STRATEGY;
+  return isNaN(Number(revalidationStrategy)) ? pageProps : { ...pageProps, revalidate: +revalidationStrategy };
+};
 
 export default Page;
