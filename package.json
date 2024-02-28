@@ -6,13 +6,17 @@
     "build": "nx run-many --target=build",
     "build:affected": "nx affected --target=build",
     "build:sb": "nx build-storybook storybook",
+    "build:spa": "nx build vite-app",
     "lint": "nx run-many --target=lint",
     "lint:affected": "nx affected --target=lint",
+    "lint:spa": "nx lint vite-app",
     "start": "nx serve nextjs-contentful",
     "start:sb": "nx storybook storybook",
+    "start:spa": "nx serve vite-app",
     "test": "nx run-many --target=test",
     "test:affected": "nx affected --target=test",
-    "test:affected:watch": "nx affected --target=test --watch"
+    "test:affected:watch": "nx affected --target=test --watch",
+    "test:spa": "nx test vite-app"
   },
   "private": true,
   "dependencies": {

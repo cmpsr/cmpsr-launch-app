@@ -8,6 +8,7 @@
    - [Installation](#installation)
 3. [Applications](#applications)
    - [Next.js & Contentful 🚀](#nextjs--contentful-)
+   - [Vite-app 🚀](#vite--app-)
    - [Storybook 📚](#storybook-)
 4. [Libraries](#libraries)
    - [UI Components 🎨](#ui-components-)
@@ -58,6 +59,10 @@ Our monorepo features several applications, each designed for specific functiona
 ### Next.js & Contentful 🚀
 
 The Next.js-Contentful application is a central part of this template, offering dynamic, content-rich web experiences. For setup and usage details, see the [Next.js-Contentful README](./apps/nextjs-contentful/README.md).
+
+### Vite-app 🚀
+
+The vite-app is the recommended way to create single page applications. For setup and usage details, see the [Vite-app README](./apps/vite-app/README.md).
 
 ### Storybook 📚
 
