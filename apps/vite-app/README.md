@@ -8,6 +8,7 @@
    - [Building](#building)
    - [Testing](#testing)
    - [Linting](#linting)
+3. [Usage](#usage)
 
 ## Introduction
 
@@ -45,4 +46,30 @@ To perform linting on the project's codebase, run the following command:
 
 ```bash
 npm run lint:spa
+```
+
+## Usage
+
+### Environment variables
+
+You can define environment variables for your project as usual, create an `.env` file in the root folder of the project and define your variables as usual:
+
+```bash
+ENV_VAR=value
+```
+
+To use the environment variables in your code we provide the [environment service](./src/services/env.service.ts) that verifies that all required environment variables are defined, just fill the `requiredVariables` array with the name of the variables to check.
+
+The service itself can be used like this:
+
+```typescript
+import envService from '../env.service';
+
+function SomeService() {
+  const envVar = envService.getEnv().ENV_VAR;
+
+  // Rest of the logic that uses envVar
+}
+
+export default SomeService;
 ```
