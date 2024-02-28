@@ -53,10 +53,10 @@ npm run lint:spa
 
 ### Environment variables
 
-You can define environment variables for your project as usual, create an `.env` file in the root folder of the project and define your variables as usual:
+You can define environment variables for your project as usual, create an `.env` file in the root folder of the project and define your variables as [recommended by vitejs](https://vitejs.dev/guide/env-and-mode.html):
 
 ```bash
-ENV_VAR=value
+VITE_ENV_VAR=value
 ```
 
 To use the environment variables in your code we provide the [environment service](./src/services/env.service.ts) that verifies that all required environment variables are defined, just fill the `requiredVariables` array with the name of the variables to check.
@@ -67,7 +67,7 @@ The service itself can be used like this:
 import envService from '../env.service';
 
 function SomeService() {
-  const envVar = envService.getEnv().ENV_VAR;
+  const envVar = envService.getEnv().VITE_ENV_VAR;
 
   // Rest of the logic that uses envVar
 }
