@@ -9,6 +9,7 @@
    - [Testing](#testing)
    - [Linting](#linting)
 3. [Usage](#usage)
+4. [Other services provided](#other-services-provided)
 
 ## Introduction
 
@@ -73,3 +74,7 @@ function SomeService() {
 
 export default SomeService;
 ```
+
+## Other services provided
+
+- [Auth service](./src/services/auth.service.ts): handles logic to login, logout and user sessions identification
