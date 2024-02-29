@@ -9,6 +9,7 @@
    - [Testing](#testing)
    - [Linting](#linting)
 3. [Usage](#usage)
+   - [Environment variables](#environment-variables)
 4. [Other services provided](#other-services-provided)
 
 ## Introduction
@@ -21,6 +22,8 @@ Install all the dependencies by executing `npm install` in the workspace's root 
 
 ### Running the Application
 
+By default when running the app in dev mode we are enabling server response mocking. This behavior can be disabled by commenting/removing the service worker in the [main file](./src/main.tsx). You will also have to define the `VITE_API_URL` environment variable, more details in [here](#environment-variables).
+
 You can run the application by executing:
 
 ```bash
@@ -30,7 +33,7 @@ npm run start:spa
 if you need to run the application in production mode use:
 
 ```bash
-npm run start:spa --omit=dev
+nx serve vite-app --prod
 ```
 
 ### Testing
