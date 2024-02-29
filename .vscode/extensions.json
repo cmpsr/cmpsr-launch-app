@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker",
+    "esbenp.prettier-vscode",
+    "mattpocock.ts-error-translator"
+  ]
+}
