@@ -37,13 +37,13 @@ With these prerequisites in place, you can proceed to the project setup.
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/cmpsr/nextjs-contentful-renderer-example-app.git
+   git clone https://github.com/cmpsr/cmpsr-launch-app.git
    ```
 
 2. **Navigate to the project directory**
 
    ```bash
-   cd nextjs-contentful-renderer-example-app
+   cd cmpsr-launch-app
    ```
 
 3. **Install dependencies**
