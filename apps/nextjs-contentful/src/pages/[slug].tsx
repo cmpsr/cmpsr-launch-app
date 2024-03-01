@@ -7,7 +7,7 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   paths: (await pathsRepository.getStaticSlugs()).map((slug: string) => ({
     params: { slug },
   })),
-  fallback: false,
+  fallback: 'blocking',
 });
 
 export const getStaticProps: GetStaticProps = async (context) => await pageRepository.getStaticPageContent(context);
