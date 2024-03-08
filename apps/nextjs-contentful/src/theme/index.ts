@@ -13,6 +13,7 @@
  *
  * You can find the Composer themes plugin here:
  * [Composer themes Figma plugin](https://www.figma.com/community/plugin/1131606090957780017/composer-themes)
+ *
  */
 
 export const theme = {
