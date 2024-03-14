@@ -11,7 +11,7 @@
    - [Vite-app 🚀](#vite--app-)
    - [Storybook 📚](#storybook-)
 4. [Libraries](#libraries)
-   - [UI Components 🎨](#ui-components-)
+   - [UI Components 🎨🎨](#ui-components-)
 5. [License ](#license)
 
 ## Introduction
