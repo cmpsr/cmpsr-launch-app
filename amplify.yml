@@ -1,19 +1,16 @@
 version: 1
 applications:
-  - frontend:
+  - appRoot: apps/nextjs-contentful
+    frontend:
       phases:
         preBuild:
           commands:
-            - npm i
+            - npm ci
         build:
           commands:
             - env | grep -e CONTENTFUL_ -e SITE_DOMAIN -e REDIS_URL >> .env.production
             - npx nx build nextjs-contentful --prod --verbose
       artifacts:
-        baseDirectory: dist/apps/nextjs-contentful/.next
+        baseDirectory: ../../dist/apps/nextjs-contentful/.next
         files:
           - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-          - dist/**/*
