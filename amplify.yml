@@ -2,6 +2,7 @@ version: 1
 applications:
   - appRoot: apps/nextjs-contentful
     frontend:
+      buildPath: /
       phases:
         preBuild:
           commands:
