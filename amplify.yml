@@ -5,7 +5,7 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm ci
+            - npm i
         build:
           commands:
             - env | grep -e CONTENTFUL_ -e SITE_DOMAIN -e REDIS_URL >> .env.production
